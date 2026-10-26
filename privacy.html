@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How HomeServer Backup accesses, uses, stores and shares Google Drive data.">
+  <title>Privacy notice — HomeServer Backup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><a class="brand" href="./">HomeServer Backup</a><nav aria-label="Main"><a href="./">About the application</a></nav></header>
+  <main id="main" class="policy">
+    <p class="eyebrow">Data handling</p><h1>Privacy notice</h1>
+    <p class="intro">HomeServer Backup is a private, operator-controlled integration for encrypted backups and document intake in the operator's own Google Drive account.</p>
+    <p class="date">Last updated: 26 October 2026</p>
+    <section><h2>Information accessed and its purpose</h2>
+      <p>The application accesses Drive file and folder information and backup file contents to upload, locate, check and restore encrypted backups. Backups contain Paperless document files, database contents and configuration, and may include other applications configured by the operator.</p>
+      <p>When document intake is enabled, it downloads copies of documents from the selected Inbox to the private Paperless server for local OCR and organization. It records file identifiers, names, content hashes and processing results. Successful originals are moved to Imported; unsupported or uncertain results are moved to Review. Originals are preserved.</p>
+      <p>Drive authorization permits access to Drive files generally. The deployment is configured to operate within folders selected by the operator; that folder setting is not a separate Google permission boundary.</p>
+    </section>
+    <section><h2>Storage and protection</h2>
+      <p>Restic encrypts backups before they are uploaded. Local backup repositories and protected restore-test staging are maintained on the private server. The operator stores the recovery password independently.</p>
+      <p>Intake documents and their local processing copies are readable by the private server for OCR; they are not separately encrypted by restic until backed up. Downloaded copies and processing records remain in protected local storage until the operator applies a retention policy.</p>
+      <p>Google authorization credentials are stored in protected server configuration. Connections to Google's APIs use HTTPS. Google handles data stored in Drive according to its own policies.</p>
+    </section>
+    <section><h2>Sharing and other uses</h2>
+      <p>This application uses Google data for backup, verification, recovery and document intake. It does not sell that data or use it for advertising, profiling or AI model training. No document AI provider is configured for this deployment.</p>
+      <p>Use of information received from Google APIs is limited to the purposes described here and is intended to comply with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+    </section>
+    <section><h2>Retention, deletion and revocation</h2>
+      <p>The operator controls backup retention and deletion in the backup repositories and Google Drive. Revoking the application's Google access stops future authorized access; existing backups remain until the operator removes them.</p>
+      <p>The operator can revoke the connection through their Google Account settings. Removing server-side credentials or revoking access does not recover a lost backup password.</p>
+    </section>
+    <section><h2>This website and future features</h2>
+      <p>These information pages contain no analytics, advertising, sign-in forms or document-upload forms. The hosting provider may process ordinary request metadata when serving the pages.</p>
+      <p>This notice covers the backup connection and optional document intake described above.</p>
+      <p>Support contact details are provided on the application's Google authorization screen.</p>
+    </section>
+  </main>
+  <footer><a href="./">HomeServer Backup</a><span>Privacy notice</span><a href="index.html#terms">Personal-use terms</a></footer>
+</body>
+</html>

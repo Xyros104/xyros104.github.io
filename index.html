@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Information about HomeServer Backup, a private Google Drive backup integration.">
+  <title>HomeServer Backup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><a class="brand" href="./">HomeServer Backup</a><nav aria-label="Main"><a href="privacy.html">Privacy notice</a></nav></header>
+  <main id="main">
+    <p class="eyebrow">Private household application</p>
+    <h1>A recovery copy,<br>stored in Google Drive.</h1>
+    <p class="intro">HomeServer Backup connects a privately operated home server to its owner's Google Drive account to store and retrieve encrypted backups.</p>
+    <section aria-labelledby="purpose"><h2 id="purpose">What the application does</h2>
+      <p>The server runs Paperless for document management. Its backup process saves document files, the application database and configuration needed for recovery. Restic encrypts backup contents before uploading them to the owner's designated Google Drive backup folder.</p>
+      <p>The connection also allows the operator to check stored backups and download them for restore verification. Recovery requires the backup password held by the operator.</p>
+      <p>Optional document intake copies files from the operator's selected Drive Inbox into Paperless for local OCR. Originals are preserved and moved to Imported after confirmed success, or to Review when processing is unsupported or uncertain.</p>
+    </section>
+    <section aria-labelledby="access"><h2 id="access">Why Google Drive access is requested</h2>
+      <p>The application needs to read and write backup files in an existing Drive repository. Google authorization covers Drive file access; the deployment is configured to work within folders selected by the operator.</p>
+      <p>This application is for the operator's personal use. There is no public account registration or document-upload service on this website.</p>
+    </section>
+    <section id="terms" aria-labelledby="use"><h2 id="use">Personal-use terms</h2>
+      <p>The operator manages the application, its Google authorization, backup retention and recovery password. Backup completion and restore results must be checked by the operator; a stored backup is not itself a guarantee of recoverability.</p>
+      <p>Support contact details are provided on the application's Google authorization screen.</p>
+    </section>
+    <a class="text-link" href="privacy.html">Read how data is handled <span aria-hidden="true">&rarr;</span></a>
+  </main>
+  <footer><span>HomeServer Backup</span><a href="privacy.html">Privacy notice</a><a href="#terms">Personal-use terms</a></footer>
+</body>
+</html>
